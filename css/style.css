@@ -1,0 +1,39 @@
+*{
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'Open Sans Condensad';
+  src: url(../fonts/OpenSans-CondBold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root{
+  --bf-openSansCondensad:'Open Sans Condensad';
+  --bf-openSans:'Open Sans', sans-serif;
+}
+
+body{
+  max-width: 1440px;
+  width: 100%;
+  height: auto;
+  font-family: var(--bf-openSans);
+  font-weight: 400;
+}
+
+/* body end style */
+/* ================= container start style ================= */
+.container{
+  max-width: 1140px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ================= container end style ================= */
+/* ================= header start style ================= */
+.header{}
+.nav{}
+.logo{}
+/* ================= header end style ================= */
