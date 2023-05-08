@@ -1,15 +1,13 @@
 * {
   box-sizing: border-box;
 }
-@font-face {
-  font-family: "Open Sans Condensad";
-  src: url(../fonts/OpenSans-CondBold.ttf);
-  font-weight: 700;
-  font-style: normal;
+*:focus {
+  outline: 2px solid var(--bf-red);
+  outline-offset: 4px;
 }
 
 :root {
-  --bf-openSansCondensad: "Open Sans Condensad";
+  --bf-openSansCondensad: "Open Sans Condensed";
   --bf-openSans: "Open Sans", sans-serif;
   --bf-black: #222222;
   --bf-red: #de2e54;
@@ -38,16 +36,31 @@ body {
 /* ================= header start style ================= */
 .header {
 }
-.link-logo {
+.header-link-logo {
   margin-right: 114px;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
 }
-.link-logo img {
-  width: 185px;
+.header-link-logo:active {
+  opacity: 0.6;
+}
+.header-logo-svg {
+  width: 50px;
   height: 49.94px;
 }
-.link-logo > img.logo-svg:hover {
+.header-logo-text {
+  font-family: var(--bf-openSans);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
   color: var(--bf-black);
+  transition: all 0.8s ease;
+}
+.header-logo-text:hover {
+  color: var(--bf-red);
 }
 .navbar {
   width: 1110px;
@@ -85,6 +98,9 @@ body {
 }
 .nav-link:hover {
   color: var(--bf-red);
+}
+.nav-link:active {
+  opacity: 0.6;
 }
 .nav-inner-btn {
   padding: 12px 24px;
@@ -124,9 +140,9 @@ body {
   font-family: var(--bf-openSansCondensad);
   font-weight: 700;
   font-size: 36px;
-  line-height: 120%;
   color: var(--bf-white);
   margin-bottom: 16px;
+  line-height: 120%;
 }
 .hero-paragriph {
   font-family: var(--bf-openSans);
@@ -149,6 +165,9 @@ body {
   letter-spacing: 2px;
   text-transform: uppercase;
   text-decoration: none;
+}
+.hero-btn:active {
+  opacity: 0.6;
 }
 .hero-right img {
   padding-top: 29px;
@@ -232,23 +251,75 @@ body {
   color: var(--bf-white);
   border: 2px solid var(--bf-red);
   border-radius: 8px;
+  transition: all 0.8s ease;
+}
+.group-btn:hover {
+  border: 2px solid var(--bf-red);
+  background-color: transparent;
+  color: var(--bf-red);
+}
+.group-btn:active {
+  opacity: 0.6;
+  background: var(--bf-red);
+  color: var(--bf-white);
 }
 .footer {
 }
 .footer-hero {
   padding-top: 64px;
   padding-bottom: 64px;
+  height: 300px;
   background-color: var(--bf-lightblue);
+}
+.foot-hero-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.footer-hero-heading {
+  font-family: var(--bf-openSansCondensad);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 120%;
+  color: var(--bf-white);
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+.footer-btn {
+  border-radius: 8px;
+  border: 2px solid var(--bf-red);
+  padding: 12px 24px;
+  color: var(--bf-red);
+  text-decoration: none;
+  margin-right: 40px;
+  font-family: var(--bf-openSansCondensad);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 120%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.8s ease;
+}
+.footer-btn:last-child {
+  margin-right: 0px;
+}
+.footer-btn:hover{
+  background-color: var(--bf-red);
+  color: var(--bf-white);
+}
+.footer-btn:active{
+  opacity: 0.6;
 }
 .footer-link {
   background-color: var(--bf-black);
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 .footer-nav {
   display: flex;
   justify-content: start;
   align-items: center;
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 .foot-link-logo {
   display: flex;
@@ -257,10 +328,13 @@ body {
   margin-right: 360px;
   text-decoration: none;
 }
+.foot-link-logo:hover .foot-link-logo:active {
+  opacity: 0.6;
+}
 .foot-link-logo > img {
   margin-right: 16px;
 }
-.foot-link-logo > span {
+.foot-link-logo > .foot-link-text {
   color: var(--bf-white);
   font-family: var(--bf-openSans);
   font-weight: 600;
@@ -268,7 +342,12 @@ body {
   line-height: 33px;
   padding-top: 18px;
   padding-bottom: 18px;
+  transition: all 0.8s ease;
 }
+.foot-link-text:hover {
+  color: var(--bf-red);
+}
+
 .foot-nav-list {
   height: 21px;
   padding-top: 14.47px;
@@ -293,4 +372,11 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   color: var(--bf-white);
+  transition: all 0.8s ease;
+}
+.foot-nav-link:hover {
+  color: var(--bf-red);
+}
+.foot-nav-link:active {
+  opacity: 0.6;
 }
